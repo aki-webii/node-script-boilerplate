@@ -1,0 +1,30 @@
+{
+  env: {
+    browser: true,
+    node: true,
+    es6: true
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:import/errors',
+    'prettier'
+  ],
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true,
+      jsx: true
+    },
+    sourceType: 'module'
+  },
+  plugins: ['prettier', 'import'],
+  rules: {
+    prettier/prettier: [
+      2,
+      { trailingComma: none, singleQuote: true}
+    ],
+    indent: [2, 2, {SwitchCase: 1}],
+    linebreak-style: [2, 'unix'],
+    quotes: [2, 'single']
+  }
+}
